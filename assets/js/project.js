@@ -47,7 +47,7 @@ const projects = [
   },
   {
     title: "Tour Website",
-    cardImage: "assets/images/project-page/e-commerce.png",
+    cardImage: "assets/images/project-page/tour.png",
     description: "A Tour Website built with core PHP",
     tagimg: "",
     Previewlink: "",
