@@ -5,20 +5,19 @@ AOS.init();
 const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
-    title: "Full Stack Developer",
-    cardImage: "assets/images/experience-page/productbox.webp",
-    cardImageFallback: "assets/images/experience-page/productbox.png",
-    place: "Productbox",
-    time: "(Sep, 2022 - Present)",
-    desp: "<li>I develop and maintain backend services using Node.js, Express.js, and MySQL with Sequelize, building APIs that support our React.js monorepo application. On the frontend, I work with React.js to implement features in our complex monorepo environment. I write comprehensive tests using Mocha & Chai to ensure reliability across the stack.</li>",
-  },
-  {
     title: "Freelancer",
     cardImage: "assets/images/experience-page/e-commerce.png",
-    place: "",
-    time: "(May, 2020 - Sep, 2020)",
+    place: "Local",
+    time: "(May, 2020 - present)",
     desp: "<li>Worked on different projects for different clients.</li>",
   },
+  // {
+  //   title: "Software Development Intern",
+  //   cardImage: "assets/images/experience-page/flipkart.jpg",
+  //   place: "Flipkart",
+  //   time: "(May, 2020 - present)",
+  //   desp: "<li>Worked to migrate Flipkart lite’s product page to AMP pages so that they load up instantly.</li> <li>Made changes in the current progressive web app of Flipkart to react to different actions performed on AMP page.</li> <li>Created a node module called “fk-amp” which abstracts all the files and middlewares and can be easily imported and used from express server.</li>",
+  // },
   // {
   //   title: "Student Developer",
   //   cardImage: "assets/images/experience-page/gsoc.png",
@@ -37,16 +36,12 @@ const exp = [
 
 const showCards2 = () => {
   let output = "";
-  exp.forEach(({ title, cardImage, cardImageFallback, place, time, desp }) => {
-    const fallback = cardImageFallback || cardImage;
-    const altText = place ? `${title} at ${place}` : title;
-    output += `
+  exp.forEach(
+    ({ title, cardImage, place, time, desp }) =>
+      (output += `
     <div class="col gaap" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="100" data-aos-duration="400">
       <div class="card card1">
-        <picture class="featured-picture">
-          <source srcset="${cardImage}" type="image/webp">
-          <img src="${fallback}" class="featured-image" alt="${altText}" loading="lazy" />
-        </picture>
+        <img src="${cardImage}" class="featured-image"/>
         <article class="card-body">
           <header>
             <div class="title">
@@ -63,8 +58,8 @@ const showCards2 = () => {
         </article>
       </div>
     </div>
-      `;
-  });
+      `)
+  );
   experiencecards.innerHTML = output;
 };
 document.addEventListener("DOMContentLoaded", showCards2);
@@ -112,7 +107,7 @@ const showCards = () => {
           <p class="copy">${description}</p></div>
 
       </div>
-      `),
+      `)
   );
   volunteership.innerHTML = output;
 };
@@ -126,7 +121,7 @@ const mentor = [
     title: "NaSCon'22",
     subtitle: "Mentor",
     image: "assets/images/experience-page/nescon.jpeg",
-    desp: "I paricipated in NaSCon'22 held at Fast University Islamabad.",
+    desp: "I paricipated in NaSCon'22 held at Fast University Islamabad."
   },
   // {
   //   title: "The Uplift Project",
@@ -236,7 +231,7 @@ const showCards3 = () => {
           <a href="#" class="blog-slider__button">Read More</a>
         </div>
       </div>
-      `),
+      `)
   );
   hackathonsection.innerHTML = output;
 };
