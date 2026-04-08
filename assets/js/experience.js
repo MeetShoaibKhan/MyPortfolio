@@ -5,6 +5,14 @@ AOS.init();
 const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
+    title: "Full Stack Developer",
+    cardImage: "assets/images/experience-page/productbox-image.png",
+    cardImageFallback: "assets/images/experience-page/productbox-image.png",
+    place: "Productbox",
+    time: "(Sep, 2022 - Present)",
+    desp: "<li>I develop and maintain backend services using Node.js, Express.js, and MySQL with Sequelize, building APIs that support our React.js monorepo application. On the frontend, I work with React.js to implement features in our complex monorepo environment. I write comprehensive tests using Mocha & Chai to ensure reliability across the stack.</li>",
+  },
+  {
     title: "Freelancer",
     cardImage: "assets/images/experience-page/e-commerce.png",
     place: "Local",
@@ -58,7 +66,7 @@ const showCards2 = () => {
         </article>
       </div>
     </div>
-      `)
+      `),
   );
   experiencecards.innerHTML = output;
 };
@@ -107,7 +115,7 @@ const showCards = () => {
           <p class="copy">${description}</p></div>
 
       </div>
-      `)
+      `),
   );
   volunteership.innerHTML = output;
 };
@@ -121,7 +129,7 @@ const mentor = [
     title: "NaSCon'22",
     subtitle: "Mentor",
     image: "assets/images/experience-page/nescon.jpeg",
-    desp: "I paricipated in NaSCon'22 held at Fast University Islamabad."
+    desp: "I paricipated in NaSCon'22 held at Fast University Islamabad.",
   },
   // {
   //   title: "The Uplift Project",
@@ -231,7 +239,7 @@ const showCards3 = () => {
           <a href="#" class="blog-slider__button">Read More</a>
         </div>
       </div>
-      `)
+      `),
   );
   hackathonsection.innerHTML = output;
 };
